@@ -2,26 +2,21 @@
   <head>
     <style>
       .mglass_wrapper {
-        cursor: url(blank.cur),default;
-      }
-      .mglass_picture_box {
-        zoom: 1.0;
-        z-index: 1;
+        margin: 0px auto;
       }
       .mglass_viewer {
         position: absolute;
-        visibility: hidden;
-        width: 150px; 
-        height: 150px;
-        z-index: 2;
-        overflow: hidden;	
-
-        -moz-border-radius: 75px;
-        -webkit-border-radius: 75px;
-        -khtml-border-radius: 75px;
-        border-radius: 75px;
+        width: 200px; 
+        height: 200px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -khtml-border-radius: 50%;
+        border-radius: 50%;
+        -moz-box-shadow: 5px 5px 10px #000000;
+        -webkit-box-shadow: 5px 5px 10px #000000;
+        box-shadow: 5px 5px 10px #000000;
       }
-    </style>
+   </style>
     <script>
       /**
        * @author Piotr Salaciak 2010-11-24
@@ -154,10 +149,13 @@
     </script>
   </head>
   <body>
-    <img src="http://upload.wikimedia.org/wikipedia/commons/6/6a/Manet%2C_Edouard_-_Olympia%2C_1863.jpg" width='500px'/>
-    <img src="http://www.myfreewallpapers.net/artistic/wallpapers/manet-on-the-beach.jpg" width='500px'/>
-    <img src="http://upload.wikimedia.org/wikipedia/commons/0/08/%C3%89douard_Manet_-_A_King_Charles_Spaniel.jpg" width='500px'/>
+    <img id='olympia' src="olympia_small.jpg" width='500px' height='336px' border='0' alt=''/>
+    <img id='beach' src="beach_small.jpg" width="500px" height='375px'>
+    <img id='doggy' src="cocker_spaniel_small.jpg" width="500px" height='612px'>
     <script>
+      var ol = new MGlass('olympia', 'olympia_large.jpg');
+      var ol = new MGlass('beach', 'beach_large.jpg');
+      var ol = new MGlass('doggy', 'cocker_spaniel_large.jpg');
     </script>
   </body>
 </html>
